@@ -1,6 +1,6 @@
 package br.com.letscode.consumer;
 
-import br.com.letscode.domain.CardDTO;
+import br.com.letscode.domain.Transaction;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Component;
 
@@ -8,9 +8,9 @@ import org.springframework.stereotype.Component;
 public class Consumer {
 
     @KafkaListener(groupId = "consumer-id", topics = "${topic}")
-    public void consume(CardDTO cardDTO) {
+    public void consume(Transaction transaction) {
 
-        System.out.println(cardDTO.getName());
+        System.out.println(transaction.toString());
 
     }
 

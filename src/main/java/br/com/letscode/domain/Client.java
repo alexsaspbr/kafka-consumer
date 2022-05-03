@@ -5,10 +5,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class CardDTO {
-
-    private String pan;
+public class Client {
     private String name;
-    private Brand brand;
-
+    private String ssn;
 }
